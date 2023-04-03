@@ -1,0 +1,47 @@
+html {
+    background: linear-gradient(to top, rgb(255, 255, 255), rgb(138, 136, 136));
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    height: 100vh;
+    margin: auto;
+    max-width: 500px;
+}
+
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+}
+
+h2 {
+    padding: 1rem 0 1rem 0;
+}
+
+input {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    width: 350px;
+}
+
+button {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    margin-right: 2%;
+    padding: .6rem;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+}
+
+.output {
+    font-size: 22px;
+    font-weight: 900;
+    padding: 20px 0 10px 0;
+}
+
+
