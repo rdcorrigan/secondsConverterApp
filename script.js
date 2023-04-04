@@ -28,19 +28,21 @@
 
 
 const formatDuration = (seconds) => {
-  if (seconds === 0) return "now";
-  
   let sec, min, hour, day, year, time = seconds, arr = [], obj = {};
-  
+  debugger;
+  if (seconds == 0) return "now";
+  // store # of seconds in object
   if (time >= 60) {
     sec = time % 60;
     obj["sec"] = sec;
     min = Math.floor(time/60);
     obj["min"] = min;
     time = min;
+    if (time < 60) time = 0;
   } else {
     obj["sec"] = time;
   }
+  // store # of minutes in object
   if (time >= 60) {
     min = time % 60;
     obj["min"] = min;
@@ -48,6 +50,7 @@ const formatDuration = (seconds) => {
     obj["hour"] = hour;
     time = hour;
   }
+  // store # of hours in object
   if (time >= 24) {
     hour = time % 24;
     obj["hour"] = hour;
@@ -55,13 +58,14 @@ const formatDuration = (seconds) => {
     obj["day"] = day;
     time = day;
   }
+  // store # of days and years in object
   if (time >= 365) {
     day = time % 365;
     obj["day"] = day;
     year = Math.floor(time/365);
     obj["year"] = year;
   }
-  
+  // create string array with object values
   if (obj["sec"]) {
     if (obj["min"] || obj["hour"] || obj["day"] || obj["year"]) {
       if (obj["sec"] === 1) {
@@ -164,7 +168,6 @@ const formatDuration = (seconds) => {
    return arr.join("");
 }
 
-
 const convert = () => {
   const value = document.querySelector('input').value, 
   appendDiv = document.createElement('div'), 
@@ -178,7 +181,7 @@ const convert = () => {
 }
 
 const clear = () => {
-  let input = document.querySelector('#input');
+  let input = document.querySelector('input');
   input.value = "";
 }
 
@@ -186,6 +189,7 @@ const input = document.querySelector('#input'),
 convertButton = document.querySelector('#convert'), 
 clearButton = document.querySelector('#clear'), 
 resetAll = document.querySelector('#reset');
+
 input.addEventListener('keypress', (event) => {
   if (event.keyCode === 13) convert(); });
 convertButton.addEventListener('click', convert);

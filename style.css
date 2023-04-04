@@ -1,32 +1,37 @@
 html {
-    background: linear-gradient(to top, rgb(255, 255, 255), rgb(138, 136, 136));
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-    height: 100vh;
+    background: linear-gradient(to bottom, rgb(138, 136, 136), rgb(255, 255, 255));
+    background-attachment: fixed;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     margin: auto;
-    max-width: 500px;
+    max-width: 410px;
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 h1 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 4rem;
 }
 
 h2 {
+    font-size: 1.4rem;
     padding: 1rem 0 1rem 0;
 }
 
 input {
+    border-width: 8px;
     font-size: 20px;
     margin-bottom: 10px;
     padding: 1rem;
-    width: 350px;
+    width: 342px;
 }
 
 button {
     background-color: black;
     border-radius: 5px;
     color: white;
-    font-family:Arial, Helvetica, sans-serif;
     font-weight: 900;
     margin-right: 2%;
     padding: .6rem;
@@ -36,6 +41,11 @@ button:hover {
     background-color: white;
     color: black;
     font-weight: 900;
+}
+
+#clear, #reset {
+    float:right;
+    margin-left: 2%;
 }
 
 .output {
