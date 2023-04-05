@@ -37,8 +37,7 @@ const formatDuration = (seconds) => {
     obj["sec"] = sec;
     min = Math.floor(time/60);
     obj["min"] = min;
-    time = min;
-    if (time < 60) time = 0;
+    if (min <= 60) time = 0;
   } else {
     obj["sec"] = time;
   }
