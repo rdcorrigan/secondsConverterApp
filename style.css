@@ -20,10 +20,14 @@ h2 {
     padding: 1rem 0 1rem 0;
 }
 
+h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
 input {
     border-width: 8px;
     font-size: 20px;
-    margin-bottom: 10px;
     padding: 1rem;
     width: 330px;
 }
