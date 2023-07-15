@@ -208,6 +208,9 @@ resetAll = document.querySelector('#reset');
 
 input.addEventListener('keypress', (event) => {
   if (event.keyCode === 13) convert(); });
+input.addEventListener('keydown', (event) => {
+  if (event.key === "Escape") clear();
+})
 convertButton.addEventListener('click', convert);
 clearButton.addEventListener('click', clear);
 resetAll.addEventListener('click', 
