@@ -206,10 +206,10 @@ convertButton = document.querySelector('#convert'),
 clearButton = document.querySelector('#clear'), 
 resetAll = document.querySelector('#reset');
 
-input.addEventListener('keypress', (event) => {
+input.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) convert(); });
 input.addEventListener('keydown', (event) => {
-  if (event.key === "Escape") clear();
+  if (event.keyCode === 27) clear();
 })
 convertButton.addEventListener('click', convert);
 clearButton.addEventListener('click', clear);
