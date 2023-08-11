@@ -207,9 +207,9 @@ clearButton = document.querySelector('#clear'),
 resetAll = document.querySelector('#reset');
 
 input.addEventListener('keydown', (event) => {
-  if (event.keyCode === 13) convert(); });
+  if (event.key === "Enter") convert(); });
 input.addEventListener('keydown', (event) => {
-  if (event.keyCode === 27) clear();
+  if (event.key === "Escape") clear();
 })
 convertButton.addEventListener('click', convert);
 clearButton.addEventListener('click', clear);
